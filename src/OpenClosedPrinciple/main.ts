@@ -5,6 +5,7 @@
 
 import {
   TenPercentDiscount,
+  FiftyPercentDiscount,
   Order,
   Product,
   ShoppingCart,
@@ -13,9 +14,9 @@ import {
 import { Messaging, Persistency } from './services';
 
 // const fiftyPercentDiscount = new FiftyPercentDiscount();
-// const tenPercentDiscount = new TenPercentDiscount();
+const tenPercentDiscount = new TenPercentDiscount();
 const noPercentDiscount = new NoPercentDiscount();
-const shoppingCart = new ShoppingCart(noPercentDiscount);
+const shoppingCart = new ShoppingCart(tenPercentDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
 
